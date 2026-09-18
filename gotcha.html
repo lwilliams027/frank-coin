@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pay for my Scam — Frank Coin</title>
+<meta name="description" content="Okay, I'm just joking. There's no Frank Coin. But here's my PayPal if you wanna give me a birthday gift.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Frank Coin ($FRANK) — 35th Anniversary Edition">
+<meta property="og:description" content="The first cryptocurrency backed entirely by one 35-year-old man. Fully decentralized, except for the part where it's just Frank.">
+<meta property="og:url" content="https://lwilliams027.github.io/frank-coin/gotcha.html">
+<meta property="og:image" content="https://lwilliams027.github.io/frank-coin/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>html,body{height:100%}</style>
+</head>
+<body>
+
+<main class="gift">
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+  <div class="gift-inner">
+    <img class="gift-mascot" id="mascot" src="assets/frank.png" alt="Frank, bowing" width="1080" height="2023">
+    <p class="eyebrow" data-rv>Okay, okay. I'm just joking.</p>
+    <h1 class="display" data-rv>Pay for my Scam</h1>
+    <p class="lede" data-rv>There's no Frank Coin. There's just Frank, and he's 35 now. But here's a link to my <span id="payWord">PayPal</span> if you wanna give me a birthday gift. No pressure. You clicking that button was already very funny to me.</p>
+    <div class="pay-row">
+      <a class="btn btn-gold btn-lg" id="paypalBtn" data-rv href="#">Send a gift on PayPal</a>
+      <a class="btn btn-teal btn-lg" id="venmoBtn" data-rv href="#" hidden>Send a gift on Venmo</a>
+    </div>
+    <p class="fine" data-rv>Suggested amount: $35. For obvious reasons.</p>
+    <a class="link" href="index.html" data-rv>← Back to the totally real coin</a>
+    <p class="gift-credit" data-rv>Built by Williams System L.L.C.</p>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function () {
+  /* ====== SET THESE ====== */
+  var PAYPAL_EMAIL = 'thebrickler@cunicul.us';
+  var VENMO_HANDLE = '';   // e.g. 'Frank-Smith-1' from venmo.com/u/Frank-Smith-1 — leave empty to hide the Venmo button
+  /* ======================= */
+
+  var paypalBtn = document.getElementById('paypalBtn');
+  paypalBtn.href = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=' + encodeURIComponent(PAYPAL_EMAIL) +
+    '&item_name=' + encodeURIComponent("Frank's 35th birthday gift") + '&currency_code=USD';
+  var venmoBtn = document.getElementById('venmoBtn');
+  if (VENMO_HANDLE) {
+    venmoBtn.href = 'https://venmo.com/u/' + encodeURIComponent(VENMO_HANDLE);
+    venmoBtn.hidden = false;
+    document.getElementById('payWord').textContent = 'PayPal or Venmo';
+  }
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typeof gsap === 'undefined' || reduce) return;
+
+  var confetti = document.getElementById('confetti');
+  var colors = ['#3EC9B8', '#E0578F', '#F08A3E', '#8F6CE6', '#F5C842', '#8f8f9c'];
+  function burst() {
+    var frag = document.createDocumentFragment(), pieces = [];
+    for (var i = 0; i < 90; i++) {
+      var d = document.createElement('span');
+      d.className = 'piece';
+      d.style.background = colors[i % colors.length];
+      frag.appendChild(d); pieces.push(d);
+    }
+    confetti.appendChild(frag);
+    var h = window.innerHeight;
+    pieces.forEach(function (d) {
+      var dx = gsap.utils.random(-520, 520), up = gsap.utils.random(220, 720);
+      gsap.timeline({ onComplete: function () { d.remove(); } })
+        .set(d, { x: 0, y: 0, rotation: gsap.utils.random(0, 360), scale: gsap.utils.random(.7, 1.6) })
+        .to(d, { x: dx, y: -up, duration: gsap.utils.random(.6, 1), ease: 'power2.out' })
+        .to(d, { y: h * .6, x: dx + gsap.utils.random(-90, 90), rotation: '+=' + gsap.utils.random(180, 720), duration: gsap.utils.random(1.4, 2.2), ease: 'power1.in' }, '-=0.15')
+        .to(d, { opacity: 0, duration: .4 }, '-=0.4');
+    });
+  }
+
+  gsap.timeline()
+    .from('#mascot', { y: 240, scale: .5, opacity: 0, duration: .9, ease: 'back.out(1.4)' })
+    .add(burst, '-=0.45')
+    .from('[data-rv]', { y: 24, opacity: 0, duration: .5, stagger: .09, ease: 'power2.out' }, '-=0.5')
+    .from('#paypalBtn, #venmoBtn:not([hidden])', { scale: .6, duration: .5, ease: 'back.out(2.5)' }, '-=0.35')
+    .add(function () {
+      gsap.to('#mascot', { y: -10, rotation: 1.5, duration: 2.4, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+    });
+})();
+</script>
+</body>
+</html>
