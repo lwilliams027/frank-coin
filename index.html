@@ -28,6 +28,7 @@
       <a href="#tokenomics">Tokenomics</a>
       <a href="#roadmap">Roadmap</a>
       <a href="#buy">How to buy</a>
+      <a href="#legit">Not a scam</a>
     </nav>
     <a class="btn btn-gold btn-sm" href="gotcha.html">Buy $FRANK</a>
   </div>
@@ -45,6 +46,12 @@
     <span>35 years of Frank</span>
     <span>Gas fees: $0</span>
     <span>Rug pull risk: it's Frank</span>
+    <span>This is not a scam</span>
+    <span>Please don't read the fine print</span>
+    <span>SEC approved*</span>
+    <span>*Not SEC approved</span>
+    <span>Trust me</span>
+    <span>Still not a scam</span>
   </div>
 </div>
 
@@ -63,6 +70,11 @@
         <code id="caText">0xFRANK000000000000000000000000000000035BDAY</code>
         <button type="button" id="copyCa">Copy</button>
       </div>
+      <ul class="trust hero-trust" data-hero>
+        <li class="badge">Not a scam</li>
+        <li class="badge">Audited by Frank's mom</li>
+        <li class="badge">Fine print: don't</li>
+      </ul>
     </div>
     <div class="hero-art">
       <div class="rays" id="rays" aria-hidden="true"></div>
@@ -179,6 +191,33 @@
     </div>
   </section>
 
+  <section class="wrap" id="legit">
+    <p class="eyebrow" data-rise>Trust &amp; safety</p>
+    <h2 class="display" data-rise>Definitely not a scam.</h2>
+    <p class="sub" data-rise>We understand you may have questions. We have answers. Please don't compare them.</p>
+    <ul class="trust" data-rise>
+      <li class="badge">Not a scam</li>
+      <li class="badge">SEC approved*</li>
+      <li class="badge">Rug-pull resistant**</li>
+      <li class="badge">Fine print available***</li>
+    </ul>
+    <ul class="footnotes" data-rise>
+      <li>* Not approved by the SEC.</li>
+      <li>** Frank does not own a rug.</li>
+      <li>*** Please don't.</li>
+    </ul>
+    <div class="faq">
+      <details data-rise><summary>Is this a scam?</summary><p>No. Next question.</p></details>
+      <details data-rise><summary>The next page says "Pay for my Scam."</summary><p>Then don't go to the next page. Problem solved. Also please go to the next page.</p></details>
+      <details data-rise><summary>Can I read the fine print?</summary><p>We'd honestly prefer you didn't. It's at the very bottom. It's very small. That's on purpose.</p></details>
+      <details data-rise><summary>Where does my money go?</summary><p>Into the ecosystem. The ecosystem is Frank. Frank is going to dinner.</p></details>
+      <details data-rise><summary>Has it been audited?</summary><p>Frank's mom looked at it and said "that's nice, honey." That's an audit.</p></details>
+      <details data-rise><summary>Is it approved by the SEC?</summary><p>Yes.* <span class="muted">(*No.)</span></p></details>
+      <details data-rise><summary>Can I get my money back?</summary><p>Look at him. Look how humble he is. He's bowing. Would that man scam you?</p></details>
+      <details data-rise><summary>Why should I trust you?</summary><p>Because this page says "not a scam" eleven times. Scammers don't do that. Probably. We didn't check.</p></details>
+    </div>
+  </section>
+
   <section class="wrap" id="community">
     <p class="eyebrow" data-rise>What people are saying</p>
     <h2 class="display" data-rise>The community speaks.</h2>
@@ -201,7 +240,8 @@
 <footer>
   <div class="wrap">
     <p>$FRANK is not a cryptocurrency, security, token, financial instrument, or investment of any kind. It is a 35-year-old man. Nothing on this page is financial advice, and the chart is drawn from memory. Past performance of Frank is not indicative of future Frank.</p>
-    <p>© 2026 Frank. All 35 years reserved.</p>
+    <p>© 2026 Frank. All 35 years reserved. Not a scam.</p>
+    <p class="fineprint"><strong>Fine print.</strong> You were asked not to read this. By continuing, you acknowledge that Frank Coin is not a coin, that Frank is a person, and that the "presale" is a birthday. No tokens will be issued. No tokens exist. The contract address above is the word FRANK followed by some zeros. The chart was drawn by Frank with a mouse. Frank's mom is not a licensed auditor. Nothing on this page is a scam, because a scam requires you to believe it, and you have now read the fine print. Stop reading. Go back up and click the button.</p>
     <p class="credit">Built by Williams System L.L.C.</p>
   </div>
 </footer>
@@ -236,7 +276,7 @@
   /* copy contract */
   document.getElementById('copyCa').addEventListener('click', function () {
     var text = document.getElementById('caText').textContent;
-    var done = function () { showToast('Copied. It does nothing.'); };
+    var done = function () { showToast('Copied. It does nothing. Not a scam.'); };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, done);
     else done();
   });
