@@ -1,4 +1,4 @@
-# Frank Coin ($FRANK)
+# Frankoin ($FRANK)
 
 A joke meme-coin landing page for Frank's 35th birthday. Every "Buy $FRANK" button leads to
 `gotcha.html`, which admits there is no coin and links to Frank's PayPal for birthday gifts.
