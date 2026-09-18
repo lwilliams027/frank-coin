@@ -79,7 +79,7 @@
     <div class="hero-art">
       <div class="rays" id="rays" aria-hidden="true"></div>
       <div class="glow" id="glow" aria-hidden="true"></div>
-      <img class="mascot" id="mascot" src="assets/frank.png" alt="A cartoon Frank with swept-back blond hair and a confetti-print shirt, bowing humbly" width="1080" height="2023">
+      <img class="mascot" id="mascot" src="assets/frank.png" alt="A cartoon Frank with swept-back blond hair and a confetti-print shirt, bowing humbly" width="720" height="1349">
       <p class="caption">Frank, bowing to his investors (you).</p>
     </div>
   </section>
@@ -194,27 +194,48 @@
   <section class="wrap" id="legit">
     <p class="eyebrow" data-rise>Trust &amp; safety</p>
     <h2 class="display" data-rise>Definitely not a scam.</h2>
-    <p class="sub" data-rise>We understand you may have questions. We have answers. Please don't compare them.</p>
-    <ul class="trust" data-rise>
-      <li class="badge">Not a scam</li>
-      <li class="badge">SEC approved*</li>
-      <li class="badge">Rug-pull resistant**</li>
-      <li class="badge">Fine print available***</li>
+    <p class="sub" data-rise>We ran Frank Coin through the official scam checklist. It passed every item. We also wrote the checklist.</p>
+
+    <div class="notscam" data-rise>
+      <div class="seal-wrap" id="sealWrap">
+        <svg class="seal" viewBox="0 0 240 240" role="img" aria-label="Certified not a scam. Frank approved. Self-certified.">
+          <defs><path id="sealPath" d="M120,120 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0"/></defs>
+          <circle cx="120" cy="120" r="114" fill="none" stroke="var(--gold)" stroke-width="6"/>
+          <circle cx="120" cy="120" r="104" fill="none" stroke="var(--gold)" stroke-width="2"/>
+          <circle cx="120" cy="120" r="66" fill="none" stroke="var(--gold)" stroke-width="2"/>
+          <g id="sealRing"><text class="seal-text"><textPath href="#sealPath" textLength="540" lengthAdjust="spacing">CERTIFIED NOT A SCAM • FRANK APPROVED • SELF-CERTIFIED •</textPath></text></g>
+          <text x="120" y="108" text-anchor="middle" class="seal-check">✓</text>
+          <text x="120" y="146" text-anchor="middle" class="seal-big">100%</text>
+          <text x="120" y="168" text-anchor="middle" class="seal-small">LEGIT · SOURCE: FRANK</text>
+        </svg>
+      </div>
+      <div class="counter">
+        <p class="stat-label">Times this page says "not a scam"</p>
+        <p class="count-num"><span id="scamCount">0</span></p>
+        <p class="count-note" id="countNote">Scammers don't say it this many times. That's just science.</p>
+        <button class="btn btn-gold" type="button" id="sayAgain">Say it again</button>
+        <div class="cloud" id="cloud" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <ul class="check" id="checklist">
+      <li class="head" data-rise><span>Red flag</span><span>Frank Coin</span><span>Verdict</span></li>
+      <li data-rise><span class="flag">Promises guaranteed returns</span><span class="ans">Promises nothing. Frank personally promises dinner.</span><span class="verdict">Not a scam</span></li>
+      <li data-rise><span class="flag">Pressures you to buy right now</span><span class="ans">The presale ends on his birthday. That's not pressure, that's a calendar.</span><span class="verdict">Not a scam</span></li>
+      <li data-rise><span class="flag">Anonymous team</span><span class="ans">The team is one guy. There's a drawing of him above. He's bowing.</span><span class="verdict">Not a scam</span></li>
+      <li data-rise><span class="flag">Asks for your money</span><span class="ans">Yes. For a birthday. Legally different.</span><span class="verdict">Not a scam</span></li>
+      <li data-rise><span class="flag">Rug pull risk</span><span class="ans">Frank does not own a rug.</span><span class="verdict">Not a scam</span></li>
+      <li data-rise><span class="flag">Has fine print</span><span class="ans">It does. It's at the bottom. You've been asked, politely, not to read it.</span><span class="verdict">Not a scam</span></li>
+      <li data-rise><span class="flag">Too good to be true</span><span class="ans">It isn't good. That's how you know it's true.</span><span class="verdict">Not a scam</span></li>
+      <li data-rise><span class="flag">Says "scam" on the next page</span><span class="ans">Look, nobody's perfect.</span><span class="verdict">Still not a scam</span></li>
+      <li class="total" data-rise><span class="flag">Score</span><span class="ans">8 of 8. Passed. Test written, taken and graded by Frank.</span><span class="verdict">Not a scam</span></li>
     </ul>
-    <ul class="footnotes" data-rise>
-      <li>* Not approved by the SEC.</li>
-      <li>** Frank does not own a rug.</li>
-      <li>*** Please don't.</li>
-    </ul>
-    <div class="faq">
-      <details data-rise><summary>Is this a scam?</summary><p>No. Next question.</p></details>
-      <details data-rise><summary>The next page says "Pay for my Scam."</summary><p>Then don't go to the next page. Problem solved. Also please go to the next page.</p></details>
-      <details data-rise><summary>Can I read the fine print?</summary><p>We'd honestly prefer you didn't. It's at the very bottom. It's very small. That's on purpose.</p></details>
-      <details data-rise><summary>Where does my money go?</summary><p>Into the ecosystem. The ecosystem is Frank. Frank is going to dinner.</p></details>
-      <details data-rise><summary>Has it been audited?</summary><p>Frank's mom looked at it and said "that's nice, honey." That's an audit.</p></details>
-      <details data-rise><summary>Is it approved by the SEC?</summary><p>Yes.* <span class="muted">(*No.)</span></p></details>
-      <details data-rise><summary>Can I get my money back?</summary><p>Look at him. Look how humble he is. He's bowing. Would that man scam you?</p></details>
-      <details data-rise><summary>Why should I trust you?</summary><p>Because this page says "not a scam" eleven times. Scammers don't do that. Probably. We didn't check.</p></details>
+
+    <div class="qa">
+      <div class="qa-card" data-rise><h3>Is this a scam?</h3><p>No. Next question.</p></div>
+      <div class="qa-card" data-rise><h3>Can I read the fine print?</h3><p>We'd honestly prefer you didn't. It's very small. That's on purpose.</p></div>
+      <div class="qa-card" data-rise><h3>Where does my money go?</h3><p>Into the ecosystem. The ecosystem is Frank. Frank is going to dinner.</p></div>
+      <div class="qa-card" data-rise><h3>Can I get my money back?</h3><p>Look at him. He's bowing. Would that man scam you?</p></div>
     </div>
   </section>
 
@@ -281,6 +302,36 @@
     else done();
   });
 
+  /* not-a-scam counter (counted before the ticker is duplicated, and without the script text) */
+  var countEl = document.getElementById('scamCount'), noteEl = document.getElementById('countNote'),
+      cloud = document.getElementById('cloud'), sayBtn = document.getElementById('sayAgain');
+  var visibleText = ['.ticker', 'main', 'footer'].map(function (s) { return document.querySelector(s).textContent; }).join(' ');
+  var baseCount = (visibleText.match(/not a scam/gi) || []).length;
+  var said = 0;
+  var notes = {
+    5: 'Five. See? Would a scammer say it five times?',
+    10: 'Ten. Okay, this is starting to sound suspicious, honestly.',
+    20: 'Twenty. Frank is starting to believe it himself.',
+    35: 'Thirty-five. Nice. Now go click a yellow button.'
+  };
+  countEl.textContent = baseCount;
+  countEl.dataset.count = baseCount;
+  sayBtn.addEventListener('click', function () {
+    said++;
+    var pill = document.createElement('span');
+    pill.className = 'mini';
+    pill.textContent = 'Not a scam';
+    cloud.appendChild(pill);
+    countEl.textContent = baseCount + said;
+    if (notes[said]) noteEl.textContent = notes[said];
+    if (said >= 35) { sayBtn.disabled = true; sayBtn.textContent = "That's enough"; }
+    if (animate) {
+      gsap.from(pill, { scale: 0, rotation: gsap.utils.random(-20, 20), duration: .45, ease: 'back.out(3)' });
+      gsap.fromTo(countEl, { scale: 1.35 }, { scale: 1, duration: .35, ease: 'back.out(2)' });
+      gsap.fromTo(sayBtn, { rotation: -4 }, { rotation: 0, duration: .4, ease: 'elastic.out(1, .4)' });
+    }
+  });
+
   /* ticker */
   var track = document.getElementById('tickerTrack');
   if (!reduce) {
@@ -288,7 +339,7 @@
     if (hasGsap) gsap.to(track, { xPercent: -50, ease: 'none', duration: 32, repeat: -1 });
   }
 
-  /* chart */
+  /* chart (drawn at a phone-sized viewBox on narrow screens so the axis text stays readable) */
   var START = 1991, END = 2026, MAX = 3.5;
   var events = {
     1991: 'Frank is born. Price: $0. Potential: unlimited.',
@@ -306,37 +357,68 @@
     pts.push({ year: y, v: Math.max(0, v) });
   }
   pts[pts.length - 1].v = MAX;
-
-  var W = 720, H = 320, padL = 80, padR = 100, padT = 22, padB = 38;
-  var X = function (yr) { return padL + (yr - START) / (END - START) * (W - padL - padR); };
-  var Y = function (v) { return padT + (1 - v / 3.7) * (H - padT - padB); };
   var fmt = function (v) { return '$' + (v / 1e6).toFixed(7).replace(/0+$/, '').replace(/\.$/, ''); };
 
-  var line = pts.map(function (p, i) { return (i ? 'L' : 'M') + X(p.year).toFixed(1) + ' ' + Y(p.v).toFixed(1); }).join(' ');
-  var area = line + ' L' + X(END).toFixed(1) + ' ' + Y(0).toFixed(1) + ' L' + X(START).toFixed(1) + ' ' + Y(0).toFixed(1) + ' Z';
+  var chartWrap = document.getElementById('chartWrap'), chartCompact = null;
+  function buildChart() {
+    var compact = chartWrap.clientWidth < 520;
+    if (compact === chartCompact) return;
+    chartCompact = compact;
+    var W = compact ? 420 : 720, H = compact ? 290 : 320, padL = compact ? 76 : 80, padR = compact ? 88 : 100, padT = 22, padB = 38;
+    var X = function (yr) { return padL + (yr - START) / (END - START) * (W - padL - padR); };
+    var Y = function (v) { return padT + (1 - v / 3.7) * (H - padT - padB); };
+    var yTicks = compact ? [0, 2] : [0, 1, 2, 3], xTicks = compact ? [1991, 2010, 2026] : [1991, 2000, 2010, 2020, 2026];
 
-  var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" id="priceSvg" role="img" aria-label="Frank Coin price from 1991 to 2026, rising from zero dollars to 0.0000035 dollars">';
-  svg += '<defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4ADE80" stop-opacity=".28"/><stop offset="1" stop-color="#4ADE80" stop-opacity="0"/></linearGradient></defs>';
-  [0, 1, 2, 3].forEach(function (g) {
-    svg += '<line class="grid" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + Y(g).toFixed(1) + '" y2="' + Y(g).toFixed(1) + '"/>';
-    svg += '<text class="axis" x="' + (padL - 8) + '" y="' + (Y(g) + 4).toFixed(1) + '" text-anchor="end">' + fmt(g) + '</text>';
-  });
-  [1991, 2000, 2010, 2020, 2026].forEach(function (yr) {
-    svg += '<text class="axis" x="' + X(yr).toFixed(1) + '" y="' + (H - 12) + '" text-anchor="middle">' + yr + '</text>';
-  });
-  svg += '<path class="area" id="areaPath" d="' + area + '"/>';
-  svg += '<path class="price" id="pricePath" d="' + line + '"/>';
-  svg += '<line class="cross" id="cross" x1="0" x2="0" y1="' + padT + '" y2="' + Y(0).toFixed(1) + '"/>';
-  Object.keys(events).forEach(function (yr) {
-    var p = pts[yr - START];
-    svg += '<circle class="ev" cx="' + X(p.year).toFixed(1) + '" cy="' + Y(p.v).toFixed(1) + '" r="4" fill="#1d1730" stroke="#4ADE80" stroke-width="2"/>';
-  });
-  var last = pts[pts.length - 1];
-  svg += '<circle id="endDot" cx="' + X(last.year).toFixed(1) + '" cy="' + Y(last.v).toFixed(1) + '" r="5" fill="#4ADE80" stroke="#1d1730" stroke-width="2"/>';
-  svg += '<text class="endlabel" id="endLabel" x="' + (X(last.year) + 12).toFixed(1) + '" y="' + (Y(last.v) + 4).toFixed(1) + '">' + fmt(last.v) + '</text>';
-  svg += '<circle id="hoverDot" r="6" fill="#4ADE80" stroke="#1d1730" stroke-width="2" opacity="0"/>';
-  svg += '</svg><div class="tip" id="tip"></div>';
-  document.getElementById('chartWrap').innerHTML = svg;
+    var line = pts.map(function (p, i) { return (i ? 'L' : 'M') + X(p.year).toFixed(1) + ' ' + Y(p.v).toFixed(1); }).join(' ');
+    var area = line + ' L' + X(END).toFixed(1) + ' ' + Y(0).toFixed(1) + ' L' + X(START).toFixed(1) + ' ' + Y(0).toFixed(1) + ' Z';
+
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" id="priceSvg"' + (compact ? ' class="compact"' : '') + ' role="img" aria-label="Frank Coin price from 1991 to 2026, rising from zero dollars to 0.0000035 dollars">';
+    svg += '<defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4ADE80" stop-opacity=".28"/><stop offset="1" stop-color="#4ADE80" stop-opacity="0"/></linearGradient></defs>';
+    yTicks.forEach(function (g) {
+      svg += '<line class="grid" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + Y(g).toFixed(1) + '" y2="' + Y(g).toFixed(1) + '"/>';
+      svg += '<text class="axis" x="' + (padL - 8) + '" y="' + (Y(g) + 4).toFixed(1) + '" text-anchor="end">' + fmt(g) + '</text>';
+    });
+    xTicks.forEach(function (yr) {
+      svg += '<text class="axis" x="' + X(yr).toFixed(1) + '" y="' + (H - 12) + '" text-anchor="middle">' + yr + '</text>';
+    });
+    svg += '<path class="area" id="areaPath" d="' + area + '"/>';
+    svg += '<path class="price" id="pricePath" d="' + line + '"/>';
+    svg += '<line class="cross" id="cross" x1="0" x2="0" y1="' + padT + '" y2="' + Y(0).toFixed(1) + '"/>';
+    Object.keys(events).forEach(function (yr) {
+      var p = pts[yr - START];
+      svg += '<circle class="ev" cx="' + X(p.year).toFixed(1) + '" cy="' + Y(p.v).toFixed(1) + '" r="4" fill="#1d1730" stroke="#4ADE80" stroke-width="2"/>';
+    });
+    var last = pts[pts.length - 1];
+    svg += '<circle id="endDot" cx="' + X(last.year).toFixed(1) + '" cy="' + Y(last.v).toFixed(1) + '" r="5" fill="#4ADE80" stroke="#1d1730" stroke-width="2"/>';
+    svg += '<text class="endlabel" id="endLabel" x="' + (X(last.year) + 12).toFixed(1) + '" y="' + (Y(last.v) + 4).toFixed(1) + '">' + fmt(last.v) + '</text>';
+    svg += '<circle id="hoverDot" r="6" fill="#4ADE80" stroke="#1d1730" stroke-width="2" opacity="0"/>';
+    svg += '</svg><div class="tip" id="tip"></div>';
+    chartWrap.innerHTML = svg;
+
+    var svgEl = document.getElementById('priceSvg'), tip = document.getElementById('tip'),
+        cross = document.getElementById('cross'), hoverDot = document.getElementById('hoverDot');
+    function moveTip(e) {
+      var r = svgEl.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width * W;
+      var idx = Math.round((px - padL) / (W - padL - padR) * (END - START));
+      idx = Math.max(0, Math.min(pts.length - 1, idx));
+      var p = pts[idx], cx = X(p.year), cy = Y(p.v);
+      cross.setAttribute('x1', cx); cross.setAttribute('x2', cx); cross.style.opacity = 1;
+      hoverDot.setAttribute('cx', cx); hoverDot.setAttribute('cy', cy); hoverDot.setAttribute('opacity', 1);
+      tip.innerHTML = '<b>' + fmt(p.v) + '</b> · ' + p.year + (events[p.year] ? '<em>' + events[p.year] + '</em>' : '');
+      var edge = Math.min(110, r.width / 2);
+      tip.style.left = Math.max(edge, Math.min(r.width - edge, cx / W * r.width)) + 'px';
+      tip.style.top = (cy / H * r.height) + 'px';
+      tip.style.opacity = 1;
+    }
+    function hideTip() { tip.style.opacity = 0; cross.style.opacity = 0; hoverDot.setAttribute('opacity', 0); }
+    svgEl.addEventListener('pointermove', moveTip);
+    svgEl.addEventListener('pointerdown', moveTip);
+    svgEl.addEventListener('pointerleave', hideTip);
+  }
+  buildChart();
+  var resizeTimer;
+  window.addEventListener('resize', function () { clearTimeout(resizeTimer); resizeTimer = setTimeout(buildChart, 150); });
 
   var evList = document.getElementById('eventList');
   Object.keys(events).forEach(function (yr) {
@@ -344,26 +426,6 @@
     li.textContent = yr + ' — ' + events[yr];
     evList.appendChild(li);
   });
-
-  var svgEl = document.getElementById('priceSvg'), tip = document.getElementById('tip'),
-      cross = document.getElementById('cross'), hoverDot = document.getElementById('hoverDot');
-  function moveTip(e) {
-    var r = svgEl.getBoundingClientRect();
-    var px = (e.clientX - r.left) / r.width * W;
-    var idx = Math.round((px - padL) / (W - padL - padR) * (END - START));
-    idx = Math.max(0, Math.min(pts.length - 1, idx));
-    var p = pts[idx], cx = X(p.year), cy = Y(p.v);
-    cross.setAttribute('x1', cx); cross.setAttribute('x2', cx); cross.style.opacity = 1;
-    hoverDot.setAttribute('cx', cx); hoverDot.setAttribute('cy', cy); hoverDot.setAttribute('opacity', 1);
-    tip.innerHTML = '<b>' + fmt(p.v) + '</b> · ' + p.year + (events[p.year] ? '<em>' + events[p.year] + '</em>' : '');
-    tip.style.left = Math.max(110, Math.min(r.width - 110, cx / W * r.width)) + 'px';
-    tip.style.top = (cy / H * r.height) + 'px';
-    tip.style.opacity = 1;
-  }
-  function hideTip() { tip.style.opacity = 0; cross.style.opacity = 0; hoverDot.setAttribute('opacity', 0); }
-  svgEl.addEventListener('pointermove', moveTip);
-  svgEl.addEventListener('pointerdown', moveTip);
-  svgEl.addEventListener('pointerleave', hideTip);
 
   /* donut */
   var C = 2 * Math.PI * 80, gap = 2, offset = 0;
@@ -400,6 +462,14 @@
   gsap.utils.toArray('[data-rise]').forEach(function (el) {
     gsap.from(el, { y: 34, opacity: 0, duration: .7, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true } });
   });
+
+  /* certified-not-a-scam seal: slow spin, then a stamp slam when scrolled to */
+  gsap.to('#sealRing', { rotation: 360, duration: 40, ease: 'none', repeat: -1, svgOrigin: '120 120' });
+  gsap.timeline({ scrollTrigger: { trigger: '#sealWrap', start: 'top 80%', once: true } })
+    .from('#sealWrap', { scale: 2.6, opacity: 0, rotation: -30, duration: .45, ease: 'power4.in' })
+    .fromTo('#sealWrap', { y: 8 }, { y: 0, duration: .6, ease: 'elastic.out(1, .3)' });
+  gsap.from('#checklist .verdict', { scale: 0, duration: .4, ease: 'back.out(3)', stagger: .07,
+    scrollTrigger: { trigger: '#checklist', start: 'top 75%', once: true } });
 
   /* counters */
   gsap.utils.toArray('[data-count]').forEach(function (el) {
